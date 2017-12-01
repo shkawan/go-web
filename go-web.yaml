@@ -7,6 +7,7 @@ metadata:
 spec:
   selector:
     run: go-web
+    # app: go-web
   ports:
   - protocol: TCP
     port: 8080
@@ -18,7 +19,7 @@ kind: Deployment
 metadata:
   name: go-web
 spec:
-  replicas: 3
+  replicas: 1
   template:
     metadata:
       labels:
