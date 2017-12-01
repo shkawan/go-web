@@ -33,6 +33,6 @@ spec:
         - name: HOST_PLATFORM
           value: "ACS Kubernetes"
         - name: BACK_COLOR
-          value: "green"
+          value: "skyblue"
         ports:
           - containerPort: 8080
