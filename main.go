@@ -17,7 +17,19 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 
 }
 
+func hostnameHandler(w http.ResponseWriter, r *http.Request) {
+  hostname, err := os.Hostname()
+
+  if err != nil {
+    panic(err)
+  }
+
+  fmt.Fprintf(w, hostname)
+}
+
 func main() {
 	http.HandleFunc("/", indexHandler)
+  http.HandleFunc("/hostname", hostnameHandler)
 	http.ListenAndServe(":8080", nil)
 }
+
