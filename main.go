@@ -24,7 +24,7 @@ func hostnameHandler(w http.ResponseWriter, r *http.Request) {
     panic(err)
   }
 
-  fmt.Fprintf(w, hostname)
+  fmt.Fprintf(w, "<h2>%s</h2>", hostname)
 }
 
 func main() {
