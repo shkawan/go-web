@@ -24,9 +24,10 @@ func hostnameHandler(w http.ResponseWriter, r *http.Request) {
     panic(err)
   }
 
-	var htmlHeader = "<!DOCTYPE html><html><h2>My Hostname</h2>"
+	var htmlHeader = "<!DOCTYPE html><html>"
 	fmt.Fprintf(w, htmlHeader)
   fmt.Fprintf(w, "<h2>My name is %s</h2>", hostname)
+  fmt.Fprintf(w, "</html>")
 }
 
 func main() {
